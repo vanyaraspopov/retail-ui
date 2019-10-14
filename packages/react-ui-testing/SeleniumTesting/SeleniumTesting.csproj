@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <AssemblyName>Kontur.ReactUI.SeleniumTesting</AssemblyName>
     <Authors>Kontur</Authors>
@@ -32,10 +32,12 @@
     <OutputPath>..\Output</OutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="JetBrains.Annotations" Version="10.0.0" />
+    <PackageReference Include="JetBrains.Annotations" Version="2019.1.3" />
     <PackageReference Include="Kontur.RetryableAssertions" Version="0.0.1" />
-    <PackageReference Include="Kontur.Selone" Version="0.0.4" />
-    <PackageReference Include="Microsoft.Windows.Compatibility" Version="2.0.1" />
+    <PackageReference Include="Kontur.Selone" Version="0.0.5" />
     <PackageReference Include="Selenium.WebDriver" Version="3.13.1" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.1'">
+    <PackageReference Include="Microsoft.Win32.Registry" Version="4.6.0" />
   </ItemGroup>
 </Project>
